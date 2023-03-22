@@ -1,6 +1,26 @@
 :root {
     // colours
-    
+    --primary-clr-bg: hsl(0, 100%, 74%);
+    --primary-clr-btn: hsl(154, 59%, 51%);
+    --accent-clr: hsl(248, 32%, 49%);
+    --neutral-clr-drkblue: hsl(249, 10%, 26%);
+    --neutral-clr-grayblue: hsl(249, 10%, 26%);
+    --neutral-clr-white: hsl(0, 0%, 100%) ;
+
     // font
     --ff:'Poppins', sans-serif;
+
+    // font size
+    --fs-xlrg:2.25rem;
+    --fs-lrg:1.625rem;
+    --fs-body:1rem;
+    --fs-med:.875rem;
+    --fs-sml:.75rem;
+    --fs-xsml:.625rem;
+
+    //font weight
+    --fw-bold: 700;
+    --fw-semi-bold: 600;
+    --fw-med: 500;
+    --fw-reg: 400;
 }

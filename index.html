@@ -23,7 +23,7 @@
     <title>| Intro component with sign up form</title>
   </head>
   <body>
-    <main class="container">
+    <main class="container flex">
       <section class="hero">
         <h1 class="hero__title">Learn to code by watching others</h1>
         <p class="hero__text">
@@ -34,11 +34,13 @@
       </section>
 
       <section class="signUp">
-        <button class="button button__secondary">
+        <!-- signUp__banner -->
+        <div class="signUp__banner">
           Try it free 7 days <span>then $20/mo. thereafter</span>
-        </button>
+        </div>
+
         <article class="signUp__form">
-          <form action="#" role="form" method="POST">
+          <form action="#" role="form" method="GET" novalidate>
             <div class="signUp__field">
               <label class="sr-only" for="firstName">First Name</label>
               <input type="text" placeholder="First Name" id="firstName" />
@@ -51,15 +53,21 @@
 
             <div class="signUp__field">
               <label class="sr-only" for="email">Email Address</label>
-              <input type="email" placeholder="Email Address" id="email" />
+              <input
+                type="email"
+                placeholder="Email Address"
+                id="email"
+                aria-invalid="false"
+                aria-describedby="errorMessage"
+                autocomplete="off"
+              />
+              <p id="errorMessage" role="alert"></p>
             </div>
 
             <div class="signUp__field">
               <label class="sr-only" for="password">Password</label>
               <input type="password" placeholder="Password" id="password" />
             </div>
-
-            <!-- pseudo class for invalid icon -->
 
             <button class="button button__primary" type="submit">
               Claim your free trial

@@ -1,0 +1,126 @@
+@use 'mixins' as *;
+.signUp {
+
+    &__banner {
+        position: relative;
+        border-radius: .625rem;
+        background-color: var(--accent-clr);
+        margin-bottom: 1.5625rem;
+        padding:  1.25rem 1.625rem;
+        text-align: center;
+        letter-spacing: .0625rem;
+        line-height: 1.8;
+        width: 100%;
+        font-weight: var(--fw-semi-bold);
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: var(--neutral-clr-drkblue);
+            border-radius: .625rem;
+            inset: 0 0 -0.5rem 0;
+            z-index:-1;
+            opacity: .2;
+        }
+
+        & > span {
+            font-weight: var(--fw-reg);
+        }
+    }
+
+    &__form {
+        background-color: var(--neutral-clr-white);
+        border-radius: .875rem;
+        padding: 1.5625rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: var(--neutral-clr-drkblue);
+            border-radius: .625rem;
+            inset: 0 0 -0.5rem 0;
+            z-index:-1;
+            opacity: .2;
+        }
+
+        @include breakpoint(large) {
+            padding: 2.625rem;
+            width: 33.75rem;
+        }
+        
+    }
+
+
+    &__field {
+
+        position: relative;
+
+        & > input {
+            width: 100%;
+            border: solid 1px var(--neutral-clr-drkblue-100);
+            border-radius: .3125rem;
+            padding: 1.125rem 1.4375rem;
+            margin-bottom: 1.125rem;
+            font-size: var(--fs-med);
+            font-weight: var(--fw-bold);
+            color: var(--neutral-clr-drkblue);
+            position: relative;
+
+            &:focus {
+                outline: solid 1px var(--neutral-clr-drkblue-500);
+            }
+
+            @include breakpoint(large) {
+                margin-bottom: 1.375rem;    
+            }
+
+        }
+
+        [aria-invalid="true"] {
+            border: solid 2px var(--primary-clr-bg);
+            color: var(--primary-clr-bg);
+            background-repeat: no-repeat;
+            background-image: url(/images/icon-error.svg);
+            background-position: right 1.5625rem center;
+            margin-bottom: 2.8125rem;
+        
+            &:focus {
+                outline: dotted 2px var(--primary-clr-bg);
+            }
+        }
+
+        #errorMessage {
+            color: var(--primary-clr-bg);
+            font-size: var(--fs-sml);
+            font-weight: var(--fw-semi-med);
+            font-style: italic;
+            text-align: right;
+            line-height: 1.75;
+            position: absolute;
+            top: 4.1875rem;
+            right: 0;
+            
+        }
+
+        & > ::placeholder {
+            color: var(--neutral-clr-drkblue-500);
+        }
+
+    }
+
+    
+
+    &__terms {
+        color: var(--neutral-clr-drkblue-200);
+        font-size: var(--fs-sml);
+        font-weight: var(--fw-bold);
+        text-align: center;
+        line-height: 1.75;
+
+         & > a {
+            color: var(--primary-clr-bg);
+        }
+
+    }
+}

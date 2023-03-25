@@ -7,10 +7,16 @@
     --neutral-clr-grayblue: hsl(249, 10%, 26%);
     --neutral-clr-white: hsl(0, 0%, 100%) ;
 
+    --neutral-clr-drkblue-100: hsla(249, 10%, 26%, .1);
+    --neutral-clr-drkblue-200: hsla(249, 10%, 26%, .2);
+    --neutral-clr-drkblue-500: hsla(249, 10%, 26%, .5);
+    
+
     // font
     --ff:'Poppins', sans-serif;
 
     // font size
+    --fs-xxlrg:3rem;
     --fs-xlrg:2.25rem;
     --fs-lrg:1.625rem;
     --fs-body:1rem;

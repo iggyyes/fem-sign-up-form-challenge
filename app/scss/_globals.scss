@@ -27,6 +27,11 @@ button {
     border: none;
     color: inherit;
     cursor: pointer;
+    position: relative;
+    letter-spacing: .0625rem;
+    line-height: 1.8;
+    width: 100%;
+    font-weight: var(--fw-semi-bold);
 }
 
 body {
@@ -40,6 +45,7 @@ body {
 
     @include breakpoint(large) {
         height: 100vh;
+        background-image: url(/images/bg-intro-desktop.png);
     }
 }
 
@@ -51,18 +57,43 @@ body {
 
     @include breakpoint(large) {
         padding: 0;
+        width: 100vw;
+        height: 100vh;
     }
-    
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(large) {
+        flex-direction: row;
+        gap: 4.375rem;
+        align-items: center;
+    }
 }
 
 // components
 .button__primary {
+border-radius: .3125rem;
 background-color: var(--primary-clr-btn);
+text-transform: uppercase;
+margin-bottom: .625rem;
+padding:  .875rem 1.625rem;
+border-bottom: .3125rem solid var(--neutral-clr-drkblue-200);
+transition: opacity 150ms ease-in-out;
+
+    &:hover {
+        opacity: .7;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
 }
 
-.button__secondary {
-background-color: var(--accent-clr);
-}
+//add invalid class to inputs
+//javascript
 
 
 

@@ -1,6 +1,6 @@
 // Initialize modules
 const { src, dest, watch, series } = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('dart-sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
@@ -9,7 +9,7 @@ const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
 
 // Use dart-sass for @use
-sass.compiler = require('sass');
+sass.compiler = require('dart-sass');
 
 // Sass Task
 function scssTask() {

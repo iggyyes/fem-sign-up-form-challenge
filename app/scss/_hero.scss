@@ -1,9 +1,15 @@
 @use 'mixins' as *;
 .hero {
+    // flex-direction: column;
     text-align: center;
     letter-spacing: .0625rem;
     line-height: 1.7;
     padding-top: 6.25rem;
+
+    @include breakpoint(large) {
+        text-align: start;
+        padding-top: 0;
+    }
     
     
     &__title {
@@ -14,6 +20,11 @@
         
         @include breakpoint(medium) {
             font-size: var(--fs-xlrg);
+        }
+
+        @include breakpoint(large) {
+            font-size: var(--fs-xxlrg);
+            line-height: 1.1;
         }
     }
 

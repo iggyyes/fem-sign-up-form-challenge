@@ -43,12 +43,32 @@
           <form action="#" role="form" method="GET" novalidate>
             <div class="signUp__field">
               <label class="sr-only" for="firstName">First Name</label>
-              <input type="text" placeholder="First Name" id="firstName" />
+              <input
+                type="text"
+                placeholder="First Name"
+                id="firstName"
+                aria-invalid="false"
+                aria-describedby="errorMessage"
+                autocomplete="on"
+                spellcheck="false"
+              />
+              <p id="errorMessage" role="alert"></p>
+              />
             </div>
 
             <div class="signUp__field">
-              <label class="sr-only" for="firstlastName">Last Name</label>
-              <input type="text" placeholder="Last Name" id="lastName" />
+              <label class="sr-only" for="lastName">Last Name</label>
+              <input
+                type="text"
+                placeholder="Last Name"
+                id="lastName"
+                aria-invalid="false"
+                aria-describedby="errorMessage"
+                autocomplete="on"
+                spellcheck="false"
+              />
+              <p id="errorMessage" role="alert"></p>
+              />
             </div>
 
             <div class="signUp__field">
@@ -59,14 +79,25 @@
                 id="email"
                 aria-invalid="false"
                 aria-describedby="errorMessage"
-                autocomplete="off"
+                autocomplete="on"
+                spellcheck="false"
               />
               <p id="errorMessage" role="alert"></p>
             </div>
 
             <div class="signUp__field">
               <label class="sr-only" for="password">Password</label>
-              <input type="password" placeholder="Password" id="password" />
+              <input
+                type="password"
+                placeholder="Password"
+                id="password"
+                aria-invalid="false"
+                aria-describedby="errorMessage"
+                autocomplete="on"
+                spellcheck="false"
+              />
+              <p id="errorMessage" role="alert"></p>
+              />
             </div>
 
             <button class="button button__primary" type="submit">
